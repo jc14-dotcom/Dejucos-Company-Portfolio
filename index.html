@@ -1,0 +1,1713 @@
+<!DOCTYPE html>
+<html lang="en" class="dark overflow-x-hidden">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dejucos Builders OPC</title>
+    <meta name="description" content="Professional portfolio showcasing modern digital solutions, web development, and innovative design services.">
+    
+    <!-- Tailwind CSS -->
+    <link href="./output.css" rel="stylesheet">
+    
+    <!-- AOS CSS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Custom Logo Transition Styles -->
+    <style>
+        #header-logo {
+            transition: opacity 0.3s ease-in-out;
+        }
+        
+        .logo-container {
+            transition: all 0.3s ease-in-out;
+        }
+    </style>
+</head>
+<body class="antialiased bg-background dark:bg-darkbg text-gray-900 dark:text-darktext transition-colors duration-300 overflow-x-hidden">
+    <!-- Floating Background Elements -->
+    <div class="fixed inset-0 pointer-events-none z-0 overflow-hidden">
+        <div class="absolute top-20 left-10 w-32 h-32 bg-primary/5 rounded-full floating-icon"></div>
+        <div class="absolute top-40 right-20 w-24 h-24 bg-accent/5 rounded-full floating-icon"></div>
+        <div class="absolute bottom-40 left-20 w-40 h-40 bg-primary/5 rounded-full floating-icon"></div>
+        <div class="absolute bottom-20 right-10 w-28 h-28 bg-accent/5 rounded-full floating-icon"></div>
+        <div class="absolute top-1/2 left-1/4 w-20 h-20 bg-primary/5 rounded-full floating-icon"></div>
+        <div class="absolute top-1/3 right-1/3 w-36 h-36 bg-accent/5 rounded-full floating-icon"></div>
+    </div>
+    
+    <!-- Navigation -->
+    <nav id="main-navbar" class="fixed top-0 left-0 right-0 z-50 bg-white/70 dark:bg-darkbg/70 backdrop-blur-lg shadow-sm dark:shadow-gray-700/20 transition-all duration-300 overflow-x-hidden will-change-transform">
+        <div class="container mx-auto px-6 sm:px-10 py-5 max-w-full box-border">
+            <div class="flex justify-between items-center min-w-0">
+                <div class="flex items-center space-x-3 flex-shrink-0 min-w-0">
+                    <div class="w-6 h-10 sm:w-12 sm:h-12 rounded-lg flex items-center justify-center flex-shrink-0 logo-container">
+                        <img id="header-logo" src="./assets/images/company_logo/blue_logo.png" alt="DEJUCOS BUILDERS OPC Logo" class="w-full h-full object-contain transition-opacity duration-300">
+                    </div>
+                    <!-- More aggressive responsive text sizing -->
+                    <span class="hidden md:block text-xl lg:text-2xl font-bold text-gray-900 dark:text-darktext truncate">DEJUCOS BUILDERS OPC</span>
+                    <span class="hidden sm:block md:hidden text-base font-bold text-gray-900 dark:text-darktext truncate">DEJUCOS BUILDERS OPC</span>
+                    <span class="block sm:hidden text-sm font-bold text-gray-900 dark:text-darktext">DEJUCOS BUILDERS OPC</span>
+                </div>
+                
+                <div class="hidden md:flex space-x-8 items-center">
+                    <a href="#hero" class="nav-link active" data-nav-link>Home</a>
+                    <a href="#about" class="nav-link" data-nav-link>About</a>
+                    <a href="#team" class="nav-link" data-nav-link>Team</a>
+                    <a href="#services" class="nav-link" data-nav-link>Services</a>
+                    <a href="#portfolio" class="nav-link" data-nav-link>Projects</a>
+                    <a href="#testimonials" class="nav-link" data-nav-link>Permits & Licenses</a>
+                    <a href="#clients" class="nav-link" data-nav-link>Clients</a>
+                    <a href="#contact" class="nav-link" data-nav-link>Contact</a>
+                    
+                    <!-- Modern Dark Mode Switch -->
+                    <button id="dark-mode-toggle" class="relative w-14 h-8 flex items-center bg-gray-200 dark:bg-gray-700 rounded-full p-1 transition-colors duration-300 focus:outline-none group">
+                        <!-- Sun icon: left, only in light mode -->
+                        <span class="absolute left-1 top-1 w-6 h-6 flex items-center justify-center z-10 block dark:hidden">
+                            <i class="fas fa-sun text-yellow-400 text-lg"></i>
+                        </span>
+                        <!-- Moon icon: right, only in dark mode -->
+                        <span class="absolute right-1 top-1 w-6 h-6 flex items-center justify-center z-10 hidden dark:block">
+                            <i class="fas fa-moon text-gray-500 text-lg"></i>
+                        </span>
+                        <span id="switch-knob" class="absolute left-1 top-1 w-6 h-6 bg-white dark:bg-gray-900 rounded-full shadow-md transform transition-all duration-300"></span>
+                    </button>
+                </div>
+                
+                <div class="md:hidden flex items-center space-x-1 flex-shrink-0">
+                    <!-- Ultra Compact Mobile Dark Mode Switch -->
+                    <button id="mobile-dark-mode-toggle" class="relative w-8 h-5 flex items-center bg-gray-200 dark:bg-gray-700 rounded-full p-0.5 transition-colors duration-300 focus:outline-none group flex-shrink-0">
+                        <!-- Sun icon: left, only in light mode -->
+                        <span class="absolute left-0.5 top-0.5 w-4 h-4 flex items-center justify-center z-10 block dark:hidden">
+                            <i class="fas fa-sun text-yellow-400 text-xs leading-none"></i>
+                        </span>
+                        <!-- Moon icon: right, only in dark mode -->
+                        <span class="absolute right-0.5 top-0.5 w-4 h-4 flex items-center justify-center z-10 hidden dark:flex">
+                            <i class="fas fa-moon text-gray-500 text-xs leading-none"></i>
+                        </span>
+                        <span id="mobile-switch-knob" class="absolute left-0.5 top-0.5 w-4 h-4 bg-white dark:bg-gray-900 rounded-full shadow-md flex items-center justify-center transition-all duration-300"></span>
+                    </button>
+                    <button class="text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-primary transition-colors p-1.5 flex-shrink-0" id="mobile-menu-button">
+                        <i class="fas fa-bars text-base"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Mobile Menu -->
+        <div class="md:hidden bg-background dark:bg-darkbg border-t dark:border-gray-700 hidden" id="mobile-menu">
+            <div class="container mx-auto px-6 py-4 space-y-4">
+                <a href="#hero" class="block nav-link" data-nav-link>Home</a>
+                <a href="#about" class="block nav-link" data-nav-link>About</a>
+                <a href="#team" class="block nav-link" data-nav-link>Team</a>
+                <a href="#services" class="block nav-link" data-nav-link>Services</a>
+                <a href="#portfolio" class="block nav-link" data-nav-link>Projects</a>
+                <a href="#testimonials" class="block nav-link" data-nav-link>Permits & Licenses</a>
+                <a href="#clients" class="block nav-link" data-nav-link>Clients</a>
+                <a href="#contact" class="block nav-link" data-nav-link>Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="hero" class="min-h-screen flex items-center justify-center bg-gradient-to-br from-primary/10 to-accent/10 dark:from-darkbg dark:to-gray-800 pt-20 relative bg-cover bg-center bg-no-repeat" style="background-image: url('./assets/images/welcome/welcome_pagee.png');">
+        <!-- Overlay for better text readability -->
+        <div class="absolute inset-0 bg-black/40 dark:bg-black/60"></div>
+        <div class="container mx-auto px-6 text-center relative z-10">
+            <div class="max-w-4xl mx-auto">
+                <h1 class="text-5xl md:text-7xl font-bold text-white mb-6 hero-title drop-shadow-lg">
+                    Building the Future
+                    <span class="gradient-text">
+                        Together
+                    </span>
+                </h1>
+                <p class="text-xl md:text-2xl text-white/90 mb-8 max-w-2xl mx-auto hero-subtitle drop-shadow-md">
+                    DEJUCOS BUILDERS OPC - Your trusted partner in construction excellence. We deliver quality projects with integrity, innovation, and unwavering commitment to your vision.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center hero-buttons">
+                    <a href="#portfolio" class="btn-primary">View Our Projects</a>
+                    <a href="#contact" class="btn-secondary">Contact Us</a>
+                </div>
+            </div>
+            
+            <div class="mt-16" data-aos="fade-up" data-aos-delay="600">
+                <div class="inline-block floating-icon">
+                    <div class="w-32 h-32 mx-auto bg-gradient-to-r from-primary to-accent rounded-full flex items-center justify-center shadow-2xl pulse-glow p-4">
+                        <img src="./assets/images/company_logo/white_logo.png" alt="DEJUCOS BUILDERS OPC Logo" class="w-16 h-16 object-contain ml-2">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-background dark:bg-darkbg">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="section-heading dark:text-darktext">About DEJUCOS BUILDERS OPC</h2>
+                <p class="section-subheading dark:text-gray-300">
+                    Building the Future Together - Excellence in construction through integrity, innovation, and unwavering commitment to quality.
+                </p>
+            </div>
+            
+            <div class="max-w-4xl mx-auto mb-16">
+                <div data-aos="fade-up">
+                    <div class="space-y-8">
+                        <div class="bg-gradient-to-r from-primary/5 to-accent/5 dark:from-gray-800 dark:to-gray-700 rounded-2xl p-8 mb-8">
+                            <h3 class="text-2xl font-bold text-gray-900 dark:text-darktext mb-4">Prelude to Our Existence</h3>
+                            <p class="text-gray-700 dark:text-gray-300 leading-relaxed">
+                                Faith is the foundation of vision—the ability to believe in something before it becomes tangible. At DEJUCOS BUILDERS OPC, we are more than just a construction company – we are your partners in bringing architectural visions to life.
+                            </p>
+                        </div>
+                        
+                        <div class="bg-gradient-to-r from-accent/5 to-primary/5 dark:from-gray-800 dark:to-gray-700 rounded-2xl p-8">
+                            <h3 class="text-2xl font-bold text-gray-900 dark:text-darktext mb-4">Historical Background</h3>
+                            <p class="text-gray-700 dark:text-gray-300 leading-relaxed">
+                                DEJUCOS BUILDERS OPC is a forward-thinking construction company founded on resilience. With years of experience in the construction industry, we specialize in delivering high-quality residential, commercial, and industrial projects that stand the test of time.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Mission, Vision, Goal -->
+            <div class="grid md:grid-cols-3 gap-8 mb-16">
+                <div class="card p-10 text-center dark:bg-darkbg dark:border-gray-700 relative overflow-hidden" data-aos="fade-up" data-aos-delay="200" style="background: url('assets/images/about/mission.png') center/cover no-repeat;">
+                    <div class="absolute inset-0 bg-black dark:bg-black/80 pointer-events-none"></div>
+                    <div class="relative z-10 px-6 flex flex-col justify-between h-full">
+                        <!-- Invisible top spacer for icon alignment -->
+                        <div class="w-16 h-10 mx-auto mb-6 opacity-0 pointer-events-none"></div>
+                        <div>
+                            <h3 class="text-2xl font-semibold text-gray-900 dark:text-darktext mb-6">MISSION</h3>
+                            <p class="text-[18px] text-gray-600 dark:text-gray-300 leading-relaxed">
+                                To manage and grow a trusted construction entity that delivers exceptional services through innovative solutions, superior craftsmanship, and unwavering commitment to quality and safety.
+                            </p>
+                        </div>
+                        <div class="h-16 opacity-0 pointer-events-none"></div>
+                    </div>
+                </div>
+
+
+                <div class="card p-10 text-center dark:bg-darkbg dark:border-gray-700 relative overflow-hidden" data-aos="fade-up" data-aos-delay="300" style="background: url('assets/images/about/vision.png') center/cover no-repeat;">
+                    <div class="absolute inset-0 bg-white/20 dark:bg-white/100 pointer-events-none"></div>
+                    <div class="relative z-10 px-6 flex flex-col justify-between h-full">
+                        <div class="w-16 h-10 mx-auto mb-6 opacity-0 pointer-events-none"></div>
+                        <div>
+                            <h3 class="text-2xl font-semibold text-gray-900 dark:text-darktext mb-6">VISION</h3>
+                            <p class="text-[18px] text-gray-600 dark:text-gray-300 leading-relaxed">
+                                To play a vital role in nation-building by being the leading construction company recognized for transforming communities through sustainable, innovative, and high-quality construction projects.
+                            </p>
+                        </div>
+                        <div class="h-16 opacity-0 pointer-events-none"></div>
+                    </div>
+                </div>
+
+
+                <div class="card p-10 text-center dark:bg-darkbg dark:border-gray-700 relative overflow-hidden" data-aos="fade-up" data-aos-delay="400" style="background: url('assets/images/about/goal.png') center/cover no-repeat;">
+                    <div class="absolute inset-0 bg-black dark:bg-black/70 pointer-events-none"></div>
+                    <div class="relative z-10 px-6 flex flex-col justify-between h-full">
+                        <div class="w-16 h-10 mx-auto mb-6 opacity-0 pointer-events-none"></div>
+                        <div>
+                            <h3 class="text-2xl font-semibold text-gray-900 dark:text-darktext mb-6">GOAL</h3>
+                            <p class="text-[18px] text-gray-600 dark:text-gray-300 leading-relaxed">
+                                To consistently complete and deliver high-value construction projects efficiently while maintaining the highest standards of quality, safety, and client satisfaction.
+                            </p>
+                        </div>
+                        <div class="h-16 opacity-0 pointer-events-none"></div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Core Values -->
+            <div class="grid md:grid-cols-2 gap-12 mb-16">
+                <div data-aos="fade-right" data-aos-delay="500">
+                    <div class="space-y-6">
+                        <h3 class="text-2xl font-bold text-gray-900 dark:text-darktext mb-6">Core Values</h3>
+                        
+                        <div class="flex items-start space-x-4">
+                            <div class="w-12 h-12 bg-primary/10 dark:bg-primary/20 rounded-lg flex items-center justify-center flex-shrink-0">
+                                <i class="fas fa-handshake text-primary dark:text-primary text-xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-xl font-semibold text-gray-900 dark:text-darktext mb-2">Integrity & Ethics</h4>
+                                <p class="text-gray-600 dark:text-gray-300">We conduct business with honesty, transparency, and ethical practices in every project we undertake.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start space-x-4">
+                            <div class="w-12 h-12 bg-accent/10 dark:bg-accent/20 rounded-lg flex items-center justify-center flex-shrink-0">
+                                <i class="fas fa-award text-accent dark:text-accent text-xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-xl font-semibold text-gray-900 dark:text-darktext mb-2">Excellence & Quality</h4>
+                                <p class="text-gray-600 dark:text-gray-300">We maintain the highest standards in materials, craftsmanship, and project execution.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start space-x-4">
+                            <div class="w-12 h-12 bg-primary/10 dark:bg-primary/20 rounded-lg flex items-center justify-center flex-shrink-0">
+                                <i class="fas fa-users text-primary dark:text-primary text-xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-xl font-semibold text-gray-900 dark:text-darktext mb-2">Commitment to Clients</h4>
+                                <p class="text-gray-600 dark:text-gray-300">Your success is our priority. We work closely with you to achieve your goals and exceed expectations.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div data-aos="fade-left" data-aos-delay="600">
+                    <div class="space-y-6">
+                        <div class="flex items-start space-x-4">
+                            <div class="w-12 h-12 bg-accent/10 dark:bg-accent/20 rounded-lg flex items-center justify-center flex-shrink-0">
+                                <i class="fas fa-rocket text-accent dark:text-accent text-xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-xl font-semibold text-gray-900 dark:text-darktext mb-2">Adaptability & Growth</h4>
+                                <p class="text-gray-600 dark:text-gray-300">We embrace modern construction techniques and technologies to deliver cutting-edge solutions.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start space-x-4">
+                            <div class="w-12 h-12 bg-primary/10 dark:bg-primary/20 rounded-lg flex items-center justify-center flex-shrink-0">
+                                <i class="fas fa-star text-primary dark:text-primary text-xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-xl font-semibold text-gray-900 dark:text-darktext mb-2">Going the Extra Mile</h4>
+                                <p class="text-gray-600 dark:text-gray-300">We consistently exceed expectations by delivering more than what is promised.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="bg-white dark:bg-gray-800 rounded-xl p-6 shadow-lg">
+                            <div class="flex items-center mb-3">
+                                <div class="w-12 h-12 bg-secondary rounded-lg flex items-center justify-center mr-4 shadow-card-dark dark:shadow-accent-glow">
+                                    <i class="fas fa-cogs text-white text-xl"></i>
+                                </div>
+                                <h4 class="text-xl font-bold text-gray-900 dark:text-darktext">EOS Philosophy</h4>
+                            </div>
+                            <div class="grid grid-cols-3 gap-4 text-center">
+                                <div>
+                                    <div class="w-8 h-8 bg-primary/10 dark:bg-primary/20 rounded-full flex items-center justify-center mx-auto mb-2">
+                                        <span class="text-primary font-bold text-sm">E</span>
+                                    </div>
+                                    <p class="text-sm text-gray-600 dark:text-gray-300">Expeditious</p>
+                                </div>
+                                <div>
+                                    <div class="w-8 h-8 bg-accent/10 dark:bg-accent/20 rounded-full flex items-center justify-center mx-auto mb-2">
+                                        <span class="text-accent font-bold text-sm">O</span>
+                                    </div>
+                                    <p class="text-sm text-gray-600 dark:text-gray-300">Orderly</p>
+                                </div>
+                                <div>
+                                    <div class="w-8 h-8 bg-primary/10 dark:bg-primary/20 rounded-full flex items-center justify-center mx-auto mb-2">
+                                        <span class="text-primary font-bold text-sm">S</span>
+                                    </div>
+                                    <p class="text-sm text-gray-600 dark:text-gray-300">Satisfactory</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Closing Statement -->
+            <div class="text-center" data-aos="fade-up" data-aos-delay="700">
+                <p class="text-lg text-gray-600 dark:text-gray-300 font-semibold">
+                    Building Excellence, One Project at a Time
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Management Team Section -->
+    <section id="team" class="py-20 bg-gradient-to-r from-primary/5 to-accent/5 dark:from-gray-800 dark:to-gray-700">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="section-heading dark:text-darktext">The Management Team</h2>
+                <p class="section-subheading dark:text-gray-300">
+                    Meet the experienced professionals leading DEJUCOS BUILDERS OPC with expertise and dedication.
+                </p>
+            </div>
+            
+            <div class="max-w-6xl mx-auto">
+                <!-- Top Level Management -->
+                <div class="grid md:grid-cols-2 gap-8 mb-12">
+                    <div class="text-center team-member" data-aos="zoom-in" data-aos-delay="100">
+                        <div class="w-32 h-32 bg-gray-200 dark:bg-gray-600 shadow-card-dark rounded-full mx-auto mb-4 flex items-center justify-center team-photo">
+                            <img src="./assets/images/team/ariel.png" alt="Ariel A. Dejucos" class="w-full h-full object-cover rounded-full" loading="lazy">
+                        </div>
+                        <h3 class="text-xl font-semibold text-gray-900 dark:text-darktext mb-2">Ariel A. Dejucos</h3>
+                        <p class="text-gray-600 dark:text-gray-300">Founder/President</p>
+                    </div>
+                    
+                    <div class="text-center team-member" data-aos="zoom-in" data-aos-delay="200">
+                        <div class="w-32 h-32 bg-gray-200 dark:bg-gray-600 shadow-card-dark rounded-full mx-auto mb-4 flex items-center justify-center team-photo">
+                            <img src="./assets/images/team/nora.png" alt="Nora A. Dejucos" class="w-full h-full object-cover rounded-full" loading="lazy">
+                        </div>
+                        <h3 class="text-xl font-semibold text-gray-900 dark:text-darktext mb-2">Nora A. Dejucos</h3>
+                        <p class="text-gray-600 dark:text-gray-300">Vice Pres./Human Resource Head</p>
+                    </div>
+                </div>
+                
+                <!-- Middle Management -->
+                <div class="grid md:grid-cols-3 gap-8 mb-12">
+                    <div class="text-center team-member" data-aos="zoom-in" data-aos-delay="300">
+                        <div class="w-28 h-28 bg-gray-200 dark:bg-gray-600 rounded-full mx-auto mb-4 flex items-center justify-center shadow-card-dark">
+                            <img src="./assets/images/team/joshua.png" alt="Engr. John Joshua A. Dejucos, CE" class="w-full h-full object-cover rounded-full" loading="lazy">
+                        </div>
+                        <h3 class="text-lg font-semibold text-gray-900 dark:text-darktext mb-2">Engr. John Joshua A. Dejucos, CE</h3>
+                        <p class="text-gray-600 dark:text-gray-300">Project Engineer</p>
+                    </div>
+                    
+                    <div class="text-center team-member" data-aos="zoom-in" data-aos-delay="400">
+                        <div class="w-28 h-28 bg-gray-200 dark:bg-gray-600 rounded-full mx-auto mb-4 flex items-center justify-center shadow-card-dark">
+                            <img src="./assets/images/team/manny.png" alt="Manuel R. Peña" class="w-full h-full object-cover rounded-full" loading="lazy">
+                        </div>
+                        <h3 class="text-lg font-semibold text-gray-900 dark:text-darktext mb-2">Manuel R. Peña</h3>
+                        <p class="text-gray-600 dark:text-gray-300">Business Development Manager</p>
+                    </div>
+                    
+                    <div class="text-center team-member" data-aos="zoom-in" data-aos-delay="500">
+                        <div class="w-28 h-28 bg-gray-200 dark:bg-gray-600 rounded-full mx-auto mb-4 flex items-center justify-center shadow-card-dark">
+                            <img src="./assets/images/team/adolfo.png" alt="Engr. Adolfo Dejucos Jr., EE" class="w-full h-full object-cover rounded-full" loading="lazy">
+                        </div>
+                        <h3 class="text-lg font-semibold text-gray-900 dark:text-darktext mb-2">Engr. Adolfo Dejucos Jr., EE</h3>
+                        <p class="text-gray-600 dark:text-gray-300">Project Manager</p>
+                    </div>
+                </div>
+                
+                <!-- Department Heads -->
+                <div class="grid md:grid-cols-3 gap-8 mb-12">
+                    <div class="text-center team-member" data-aos="zoom-in" data-aos-delay="600">
+                        <div class="w-28 h-28 bg-gray-200 dark:bg-gray-600 rounded-full mx-auto mb-4 flex items-center justify-center shadow-card-dark">
+                            <img src="./assets/images/team/christine.png" alt="Christine Jane A. Dejucos" class="w-full h-full object-cover rounded-full" loading="lazy">
+                        </div>
+                        <h3 class="text-lg font-semibold text-gray-900 dark:text-darktext mb-2">Christine Jane A. Dejucos</h3>
+                        <p class="text-gray-600 dark:text-gray-300">Corporate Secretary</p>
+                    </div>
+                    
+                    <div class="text-center team-member" data-aos="zoom-in" data-aos-delay="700">
+                        <div class="w-28 h-28 bg-gray-200 dark:bg-gray-600 rounded-full mx-auto mb-4 flex items-center justify-center shadow-card-dark">
+                            <img src="./assets/images/team/norielle.png" alt="Norielle A. Dejucos, CPA" class="w-full h-full object-cover rounded-full" loading="lazy">
+                        </div>
+                        <h3 class="text-lg font-semibold text-gray-900 dark:text-darktext mb-2">Norielle A. Dejucos, CPA</h3>
+                        <p class="text-gray-600 dark:text-gray-300">Finance Manager</p>
+                    </div>
+                    
+                    <div class="text-center team-member" data-aos="zoom-in" data-aos-delay="800">
+                        <div class="w-28 h-28 bg-gray-200 dark:bg-gray-600 rounded-full mx-auto mb-4 flex items-center justify-center shadow-card-dark">
+                            <img src="./assets/images/team/leira.png" alt="Leira Joy A. Dejucos" class="w-full h-full object-cover rounded-full" loading="lazy">
+                        </div>
+                        <h3 class="text-lg font-semibold text-gray-900 dark:text-darktext mb-2">Leira Joy A. Dejucos</h3>
+                        <p class="text-gray-600 dark:text-gray-300">Marketing Manager</p>
+                    </div>
+                </div>
+                
+                <!-- Support Staff -->
+                <div class="grid md:grid-cols-2 gap-8 justify-items-center">
+                    <div class="text-center team-member" data-aos="zoom-in" data-aos-delay="900">
+                        <div class="w-28 h-28 bg-gray-200 dark:bg-gray-600 rounded-full mx-auto mb-4 flex items-center justify-center shadow-card-dark">
+                            <img src="./assets/images/team/gemma.png" alt="Gemma G. Romero" class="w-full h-full object-cover rounded-full" loading="lazy">
+                        </div>
+                        <h3 class="text-lg font-semibold text-gray-900 dark:text-darktext mb-2">Gemma G. Romero</h3>
+                        <p class="text-gray-600 dark:text-gray-300">Admin Assistant</p>
+                    </div>
+                    
+                    <div class="text-center team-member" data-aos="zoom-in" data-aos-delay="1000">
+                        <div class="w-28 h-28 bg-gray-200 dark:bg-gray-600 rounded-full mx-auto mb-4 flex items-center justify-center shadow-card-dark">
+                            <!-- Charlie C. Romero photo placeholder -->
+                            <!-- <img src="./assets/images/team/charlie.png" alt="Charlie C. Romero" class="w-full h-full object-cover rounded-full" loading="lazy"> -->
+                            <i class="fas fa-user text-3xl text-gray-400"></i>
+                        </div>
+                        <h3 class="text-lg font-semibold text-gray-900 dark:text-darktext mb-2">Charlie C. Romero</h3>
+                        <p class="text-gray-600 dark:text-gray-300">Liason Officer</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-20 bg-background dark:bg-darkbg">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="section-heading dark:text-darktext">Our Services</h2>
+                <p class="section-subheading dark:text-gray-300">
+                    Comprehensive construction solutions tailored to your project needs.
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+                <div class="service-card p-8 text-center dark:bg-darkbg dark:border-gray-700 relative overflow-hidden" data-aos="fade-up" data-aos-delay="100" style="background: url('assets/images/services/building.png') center/cover no-repeat;">
+                    <div class="absolute inset-0 bg-white/40 dark:bg-black/30 pointer-events-none"></div>
+                    <div class="relative z-10">
+                        <div class="w-16 h-16 mx-auto mb-6 opacity-0 pointer-events-none"></div>
+                        <h3 class="text-xl font-semibold text-gray-900 dark:text-darktext mb-4">Building Construction</h3>
+                        <p class="text-gray-600 dark:text-gray-300 mb-6">End-to-end construction services from foundation to finishing, delivering quality structures that stand the test of time.</p>
+                        <ul class="text-sm text-gray-500 dark:text-gray-400 space-y-2">
+                            <li>• Residential Construction</li>
+                            <li>• Commercial Buildings</li>
+                            <li>• Industrial Facilities</li>
+                            <li>• Project Management</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="service-card p-8 text-center dark:bg-darkbg dark:border-gray-700 relative overflow-hidden" data-aos="fade-up" data-aos-delay="200" style="background: url('assets/images/services/glass.png') center/cover no-repeat;">
+                    <div class="absolute inset-0 bg-white/40 dark:bg-black/30 pointer-events-none"></div>
+                    <div class="relative z-10">
+                        <div class="w-16 h-16 mx-auto mb-6 opacity-0 pointer-events-none"></div>
+                        <h3 class="text-xl font-semibold text-gray-900 dark:text-darktext mb-4">Glass & Aluminum Installation</h3>
+                        <p class="text-gray-600 dark:text-gray-300 mb-6">Precise and durable installation of glass and aluminum systems for modern architectural solutions.</p>
+                        <ul class="text-sm text-gray-500 dark:text-gray-400 space-y-2">
+                            <li>• Curtain Wall Systems</li>
+                            <li>• Window Installation</li>
+                            <li>• Storefront Systems</li>
+                            <li>• Custom Glazing</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="service-card p-8 text-center dark:bg-darkbg dark:border-gray-700 relative overflow-hidden" data-aos="fade-up" data-aos-delay="300" style="background: url('assets/images/services/fit_out.png') center/cover no-repeat;">
+                    <div class="absolute inset-0 bg-white/40 dark:bg-black/30 pointer-events-none"></div>
+                    <div class="relative z-10">
+                        <div class="w-16 h-16 mx-auto mb-6 opacity-0 pointer-events-none"></div>
+                        <h3 class="text-xl font-semibold text-gray-900 dark:text-darktext mb-4">Fit-Out Works</h3>
+                        <p class="text-gray-600 dark:text-gray-300 mb-6">High-quality interior fit-out services transforming spaces into functional and aesthetically pleasing environments.</p>
+                        <ul class="text-sm text-gray-500 dark:text-gray-400 space-y-2">
+                            <li>• Office Fit-Outs</li>
+                            <li>• Retail Spaces</li>
+                            <li>• Interior Design</li>
+                            <li>• Space Planning</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="portfolio" class="py-20 bg-gradient-to-r from-primary/5 to-accent/5 dark:from-gray-800 dark:to-gray-700">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="section-heading dark:text-darktext">Our Projects</h2>
+                <p class="section-subheading dark:text-gray-300">
+                    Showcasing our latest construction projects and successful collaborations across the Philippines.
+                </p>
+            </div>
+            
+            <!-- Featured Projects Grid -->
+            <div id="projects-grid" class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Project 1 -->
+                <div class="project-card overflow-hidden dark:bg-darkbg dark:border-gray-700" data-aos="fade-up" data-aos-delay="100">
+                    <div class="h-64 bg-gradient-to-br from-primary/10 to-accent/10 dark:from-primary/20 dark:to-accent/20 overflow-hidden">
+                        <img src="assets/images/projects/rusi_corp_lagao.png" alt="Philippine Rusi Corporation - Lagao" class="w-full h-full object-cover hover:scale-105 transition-transform duration-300" loading="lazy">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold text-gray-900 dark:text-darktext mb-2">Philippine Rusi Corporation</h3>
+                        <p class="text-gray-600 dark:text-gray-300 mb-4">Commercial construction project with modern architectural design and premium finishes.</p>
+                        <div class="flex items-center justify-between">
+                            <span class="px-3 py-1 bg-primary/10 dark:bg-primary/20 text-primary dark:text-primary text-sm rounded-full">
+                                <i class="fas fa-map-marker-alt mr-1"></i>
+                                Lagao, General Santos City
+                            </span>
+                            <span class="px-3 py-1 bg-accent/10 dark:bg-accent/20 text-accent dark:text-accent text-sm rounded-full">Completed</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="project-card overflow-hidden dark:bg-darkbg dark:border-gray-700" data-aos="fade-up" data-aos-delay="200">
+                    <div class="h-64 bg-gradient-to-br from-accent/10 to-primary/10 dark:from-accent/20 dark:to-primary/20 overflow-hidden">
+                        <img src="assets/images/projects/rusi_corp_tagum.png" alt="Philippine Rusi Corporation - Tagum" class="w-full h-full object-cover hover:scale-105 transition-transform duration-300" loading="lazy">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold text-gray-900 dark:text-darktext mb-2">Philippine Rusi Corporation</h3>
+                        <p class="text-gray-600 dark:text-gray-300 mb-4">Industrial facility construction with specialized infrastructure and safety standards.</p>
+                        <div class="flex items-center justify-between">
+                            <span class="px-3 py-1 bg-primary/10 dark:bg-primary/20 text-primary dark:text-primary text-sm rounded-full">
+                                <i class="fas fa-map-marker-alt mr-1"></i>
+                                Tagum, Davao Del Norte
+                            </span>
+                            <span class="px-3 py-1 bg-accent/10 dark:bg-accent/20 text-accent dark:text-accent text-sm rounded-full">Completed</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 3 -->
+                <div class="card overflow-hidden dark:bg-darkbg dark:border-gray-700" data-aos="fade-up" data-aos-delay="300">
+                    <div class="h-64 bg-gradient-to-br from-primary/10 to-accent/10 dark:from-primary/20 dark:to-accent/20 overflow-hidden">
+                        <img src="assets/images/projects/rusi_corp_claveria.png" alt="Philippine Rusi Corporation - Claveria" class="w-full h-full object-cover hover:scale-105 transition-transform duration-300" loading="lazy">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold text-gray-900 dark:text-darktext mb-2">Philippine Rusi Corporation</h3>
+                        <p class="text-gray-600 dark:text-gray-300 mb-4">Strategic commercial development with sustainable building practices and energy efficiency.</p>
+                        <div class="flex items-center justify-between">
+                            <span class="px-3 py-1 bg-primary/10 dark:bg-primary/20 text-primary dark:text-primary text-sm rounded-full">
+                                <i class="fas fa-map-marker-alt mr-1"></i>
+                                Claveria, Misamis Oriental
+                            </span>
+                            <span class="px-3 py-1 bg-accent/10 dark:bg-accent/20 text-accent dark:text-accent text-sm rounded-full">Completed</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 4 -->
+                <div class="card overflow-hidden dark:bg-darkbg dark:border-gray-700" data-aos="fade-up" data-aos-delay="400">
+                    <div class="h-64 bg-gradient-to-br from-accent/10 to-primary/10 dark:from-accent/20 dark:to-primary/20 overflow-hidden">
+                        <img src="assets/images/projects/rusi_corp_esperanza.png" alt="Philippine Rusi Corporation - Esperanza" class="w-full h-full object-cover hover:scale-105 transition-transform duration-300" loading="lazy">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold text-gray-900 dark:text-darktext mb-2">Philippine Rusi Corporation</h3>
+                        <p class="text-gray-600 dark:text-gray-300 mb-4">Modern commercial facility with advanced construction techniques and premium materials.</p>
+                        <div class="flex items-center justify-between">
+                            <span class="px-3 py-1 bg-primary/10 dark:bg-primary/20 text-primary dark:text-primary text-sm rounded-full">
+                                <i class="fas fa-map-marker-alt mr-1"></i>
+                                Esperanza, Sultan Kudarat
+                            </span>
+                            <span class="px-3 py-1 bg-accent/10 dark:bg-accent/20 text-accent dark:text-accent text-sm rounded-full">Completed</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 5 -->
+                <div class="card overflow-hidden dark:bg-darkbg dark:border-gray-700" data-aos="fade-up" data-aos-delay="500">
+                    <div class="h-64 bg-gradient-to-br from-primary/10 to-accent/10 dark:from-primary/20 dark:to-accent/20 overflow-hidden">
+                        <img src="assets/images/projects/rusi_corp_taragona.png" alt="Philippine Rusi Corporation - Taragona" class="w-full h-full object-cover hover:scale-105 transition-transform duration-300" loading="lazy">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold text-gray-900 dark:text-darktext mb-2">Philippine Rusi Corporation</h3>
+                        <p class="text-gray-600 dark:text-gray-300 mb-4">Comprehensive building construction with focus on durability and operational efficiency.</p>
+                        <div class="flex items-center justify-between">
+                            <span class="px-3 py-1 bg-primary/10 dark:bg-primary/20 text-primary dark:text-primary text-sm rounded-full">
+                                <i class="fas fa-map-marker-alt mr-1"></i>
+                                Taragoma, Davao Oriental
+                            </span>
+                            <span class="px-3 py-1 bg-accent/10 dark:bg-accent/20 text-accent dark:text-accent text-sm rounded-full">Completed</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 6 -->
+                <div class="card overflow-hidden dark:bg-darkbg dark:border-gray-700" data-aos="fade-up" data-aos-delay="600">
+                    <div class="h-64 bg-gradient-to-br from-primary/10 to-accent/10 dark:from-primary/20 dark:to-accent/20 overflow-hidden">
+                        <img src="assets/images/projects/rusi_corp_sulop.png" alt="Philippine Rusi Corporation - Sulop" class="w-full h-full object-cover hover:scale-105 transition-transform duration-300" loading="lazy">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold text-gray-900 dark:text-darktext mb-2">Philippine Rusi Corporation</h3>
+                        <p class="text-gray-600 dark:text-gray-300 mb-4">Advanced commercial construction with state-of-the-art facilities and modern design.</p>
+                        <div class="flex items-center justify-between">
+                            <span class="px-3 py-1 bg-primary/10 dark:bg-primary/20 text-primary dark:text-primary text-sm rounded-full">
+                                <i class="fas fa-map-marker-alt mr-1"></i>
+                                Sulop, Davao Del Sur
+                            </span>
+                            <span class="px-3 py-1 bg-accent/10 dark:bg-accent/20 text-accent dark:text-accent text-sm rounded-full">Completed</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Hidden projects for "Show More" functionality -->
+            <div id="hidden-projects" class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mt-8 hidden">
+                <!-- Project 7 -->
+                <div class="card overflow-hidden dark:bg-darkbg dark:border-gray-700" data-aos="fade-up">
+                    <div class="h-64 bg-gradient-to-br from-accent/10 to-primary/10 dark:from-accent/20 dark:to-primary/20 overflow-hidden">
+                        <img src="assets/images/projects/rusi_corp_balingoan.png" alt="Philippine Rusi Corporation - Balingoan" class="w-full h-full object-cover hover:scale-105 transition-transform duration-300" loading="lazy">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold text-gray-900 dark:text-darktext mb-2">Philippine Rusi Corporation</h3>
+                        <p class="text-gray-600 dark:text-gray-300 mb-4">Multi-purpose commercial facility with innovative construction solutions and quality finishes.</p>
+                        <div class="flex items-center justify-between">
+                            <span class="px-3 py-1 bg-primary/10 dark:bg-primary/20 text-primary dark:text-primary text-sm rounded-full">
+                                <i class="fas fa-map-marker-alt mr-1"></i>
+                                Balingoan, Misamis Oriental
+                            </span>
+                            <span class="px-3 py-1 bg-accent/10 dark:bg-accent/20 text-accent dark:text-accent text-sm rounded-full">Completed</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 8 -->
+                <div class="card overflow-hidden dark:bg-darkbg dark:border-gray-700" data-aos="fade-up">
+                    <div class="h-64 bg-gradient-to-br from-primary/10 to-accent/10 dark:from-primary/20 dark:to-accent/20 overflow-hidden">
+                        <img src="assets/images/projects/rusi_corp_lake_sebu.png" alt="Philippine Rusi Corporation - Lake Sebu" class="w-full h-full object-cover hover:scale-105 transition-transform duration-300" loading="lazy">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold text-gray-900 dark:text-darktext mb-2">Philippine Rusi Corporation</h3>
+                        <p class="text-gray-600 dark:text-gray-300 mb-4">Sustainable strategic development with eco-friendly construction.</p>
+                        <div class="flex items-center justify-between">
+                            <span class="px-3 py-1 bg-primary/10 dark:bg-primary/20 text-primary dark:text-primary text-sm rounded-full">
+                                <i class="fas fa-map-marker-alt mr-1"></i>
+                                Lake Sebu, South Cotabato
+                            </span>
+                            <span class="px-3 py-1 bg-accent/10 dark:bg-accent/20 text-accent dark:text-accent text-sm rounded-full">Completed</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 9 -->
+                <div class="card overflow-hidden dark:bg-darkbg dark:border-gray-700" data-aos="fade-up">
+                    <div class="h-64 bg-gradient-to-br from-accent/10 to-primary/10 dark:from-accent/20 dark:to-primary/20 overflow-hidden">
+                        <img src="assets/images/projects/rusi_corp_ninoy_aquino.png" alt="Philippine Rusi Corporation - Sen. Ninoy Aquino" class="w-full h-full object-cover hover:scale-105 transition-transform duration-300" loading="lazy">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold text-gray-900 dark:text-darktext mb-2">Philippine Rusi Corporation</h3>
+                        <p class="text-gray-600 dark:text-gray-300 mb-4">Regional commercial development with modern infrastructure and community-focused design.</p>
+                        <div class="flex items-center justify-between">
+                            <span class="px-3 py-1 bg-primary/10 dark:bg-primary/20 text-primary dark:text-primary text-sm rounded-full">
+                                <i class="fas fa-map-marker-alt mr-1"></i>
+                                Sen. Ninoy Aquino, Sultan Kudarat
+                            </span>
+                            <span class="px-3 py-1 bg-accent/10 dark:bg-accent/20 text-accent dark:text-accent text-sm rounded-full">Completed</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 10 -->
+                <div class="card overflow-hidden dark:bg-darkbg dark:border-gray-700" data-aos="fade-up">
+                    <div class="h-64 bg-gradient-to-br from-accent/10 to-primary/10 dark:from-accent/20 dark:to-primary/20 overflow-hidden">
+                        <img src="assets/images/projects/rusi_corp_ecoland.png" alt="Philippine Rusi Corporation - Ecoland" class="w-full h-full object-cover hover:scale-105 transition-transform duration-300" loading="lazy">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold text-gray-900 dark:text-darktext mb-2">Philippine Rusi Corporation</h3>
+                        <p class="text-gray-600 dark:text-gray-300 mb-4">Commercial construction project with modern infrastructure and quality construction standards.</p>
+                        <div class="flex items-center justify-between">
+                            <span class="px-3 py-1 bg-primary/10 dark:bg-primary/20 text-primary dark:text-primary text-sm rounded-full">
+                                <i class="fas fa-map-marker-alt mr-1"></i>
+                                Ecoland, Davao City
+                            </span>
+                            <span class="px-3 py-1 bg-accent/10 dark:bg-accent/20 text-accent dark:text-accent text-sm rounded-full">Completed</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 11 -->
+                <div class="card overflow-hidden dark:bg-darkbg dark:border-gray-700" data-aos="fade-up">
+                    <div class="h-64 bg-gradient-to-br from-primary/10 to-accent/10 dark:from-primary/20 dark:to-accent/20 overflow-hidden">
+                        <img src="assets/images/projects/rusi_corp_carmen.png" alt="Philippine Rusi Corporation - Carmen" class="w-full h-full object-cover hover:scale-105 transition-transform duration-300" loading="lazy">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold text-gray-900 dark:text-darktext mb-2">Philippine Rusi Corporation</h3>
+                        <p class="text-gray-600 dark:text-gray-300 mb-4">Ongoing construction project with advanced building techniques and modern specifications.</p>
+                        <div class="flex items-center justify-between">
+                            <span class="px-3 py-1 bg-primary/10 dark:bg-primary/20 text-primary dark:text-primary text-sm rounded-full">
+                                <i class="fas fa-map-marker-alt mr-1"></i>
+                                Carmen, Agusan Del Norte
+                            </span>
+                            <span class="px-3 py-1 bg-yellow-100 dark:bg-yellow-900 text-yellow-700 dark:text-yellow-300 text-sm rounded-full">Ongoing</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 12 -->
+                <div class="card overflow-hidden dark:bg-darkbg dark:border-gray-700" data-aos="fade-up">
+                    <div class="h-64 bg-gradient-to-br from-accent/10 to-primary/10 dark:from-accent/20 dark:to-primary/20 overflow-hidden">
+                        <img src="assets/images/projects/rusco_motors_malita.png" alt="Rusco Motors Inc. - Malita" class="w-full h-full object-cover hover:scale-105 transition-transform duration-300" loading="lazy">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold text-gray-900 dark:text-darktext mb-2">Rusco Motors, Inc.</h3>
+                        <p class="text-gray-600 dark:text-gray-300 mb-4">Automotive facility construction with specialized workshop areas and customer service zones.</p>
+                        <div class="flex items-center justify-between">
+                            <span class="px-3 py-1 bg-primary/10 dark:bg-primary/20 text-primary dark:text-primary text-sm rounded-full">
+                                <i class="fas fa-map-marker-alt mr-1"></i>
+                                Malita, Davao Occidental
+                            </span>
+                            <span class="px-3 py-1 bg-yellow-100 dark:bg-yellow-900 text-yellow-700 dark:text-yellow-300 text-sm rounded-full">Ongoing</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 13 -->
+                <div class="card overflow-hidden dark:bg-darkbg dark:border-gray-700" data-aos="fade-up">
+                    <div class="h-64 bg-gradient-to-br from-accent/10 to-primary/10 dark:from-accent/20 dark:to-primary/20 overflow-hidden">
+                        <img src="assets/images/projects/fabrication_lagao.png" alt="Roll-Up Door Supply & Installation - Lagao" class="w-full h-full object-cover hover:scale-105 transition-transform duration-300" loading="lazy">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold text-gray-900 dark:text-darktext mb-2">Roll-Up Door Supply & Installation</h3>
+                        <p class="text-gray-600 dark:text-gray-300 mb-4">Professional roll-up door supply and installation for Citi Hardware with automated systems.</p>
+                        <div class="flex items-center justify-between">
+                            <span class="px-3 py-1 bg-primary/10 dark:bg-primary/20 text-primary dark:text-primary text-sm rounded-full">
+                                <i class="fas fa-map-marker-alt mr-1"></i>
+                                Lagao, General Santos City
+                            </span>
+                            <span class="px-3 py-1 bg-accent/10 dark:bg-accent/20 text-accent dark:text-accent text-sm rounded-full">Completed</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 14 -->
+                <div class="card overflow-hidden dark:bg-darkbg dark:border-gray-700" data-aos="fade-up">
+                    <div class="h-64 bg-gradient-to-br from-primary/10 to-accent/10 dark:from-primary/20 dark:to-accent/20 overflow-hidden">
+                        <img src="assets/images/projects/fabrication_gen_san.png" alt="Glass & Aluminum Installation - General Santos City" class="w-full h-full object-cover hover:scale-105 transition-transform duration-300" loading="lazy">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold text-gray-900 dark:text-darktext mb-2">Glass & Aluminum Installation</h3>
+                        <p class="text-gray-600 dark:text-gray-300 mb-4">Medical hospital and 7/11 store glass and aluminum supply and installation with precision workmanship.</p>
+                        <div class="flex items-center justify-between">
+                            <span class="px-3 py-1 bg-primary/10 dark:bg-primary/20 text-primary dark:text-primary text-sm rounded-full">
+                                <i class="fas fa-map-marker-alt mr-1"></i>
+                                General Santos City
+                            </span>
+                            <span class="px-3 py-1 bg-accent/10 dark:bg-accent/20 text-accent dark:text-accent text-sm rounded-full">Completed</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 15 -->
+                <div class="card overflow-hidden dark:bg-darkbg dark:border-gray-700" data-aos="fade-up">
+                    <div class="h-64 bg-gradient-to-br from-accent/10 to-primary/10 dark:from-accent/20 dark:to-primary/20 overflow-hidden">
+                        <img src="assets/images/projects/fabrication_samal.png" alt="Glass & Aluminum Installation - Samal Island" class="w-full h-full object-cover hover:scale-105 transition-transform duration-300" loading="lazy">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold text-gray-900 dark:text-darktext mb-2">Glass & Aluminum Installation</h3>
+                        <p class="text-gray-600 dark:text-gray-300 mb-4">Premium glass and aluminum installation for 7/11 retail store with modern storefront design.</p>
+                        <div class="flex items-center justify-between">
+                            <span class="px-3 py-1 bg-primary/10 dark:bg-primary/20 text-primary dark:text-primary text-sm rounded-full">
+                                <i class="fas fa-map-marker-alt mr-1"></i>
+                                Samal Island, Davao City
+                            </span>
+                            <span class="px-3 py-1 bg-accent/10 dark:bg-accent/20 text-accent dark:text-accent text-sm rounded-full">Completed</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 16 -->
+                <div class="card overflow-hidden dark:bg-darkbg dark:border-gray-700" data-aos="fade-up">
+                    <div class="h-64 bg-gradient-to-br from-primary/10 to-accent/10 dark:from-primary/20 dark:to-accent/20 overflow-hidden">
+                        <img src="assets/images/projects/fabrication_agdao.png" alt="Glass & Aluminum Installation - Agdao" class="w-full h-full object-cover hover:scale-105 transition-transform duration-300" loading="lazy">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold text-gray-900 dark:text-darktext mb-2">Glass & Aluminum Installation</h3>
+                        <p class="text-gray-600 dark:text-gray-300 mb-4">Professional glass and aluminum supply and installation for R. Castillo St. 7/11 office building.</p>
+                        <div class="flex items-center justify-between">
+                            <span class="px-3 py-1 bg-primary/10 dark:bg-primary/20 text-primary dark:text-primary text-sm rounded-full">
+                                <i class="fas fa-map-marker-alt mr-1"></i>
+                                Agdao, Davao City
+                            </span>
+                            <span class="px-3 py-1 bg-accent/10 dark:bg-accent/20 text-accent dark:text-accent text-sm rounded-full">Completed</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 17 -->
+                <div class="card overflow-hidden dark:bg-darkbg dark:border-gray-700" data-aos="fade-up">
+                    <div class="h-64 bg-gradient-to-br from-primary/10 to-accent/10 dark:from-primary/20 dark:to-accent/20 overflow-hidden">
+                        <img src="assets/images/projects/other_projects_2.png" alt="Other Projects" class="w-full h-full object-cover hover:scale-105 transition-transform duration-300" loading="lazy">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold text-gray-900 dark:text-darktext mb-2">Other Projects</h3>
+                        <p class="text-gray-600 dark:text-gray-300 mb-4">Various construction and development projects showcasing our diverse capabilities and expertise.</p>
+                        <div class="flex items-center justify-between">
+                            <span class="px-3 py-1 bg-gray-100 dark:bg-gray-700 text-gray-600 dark:text-gray-300 text-sm rounded-full">
+                                <i class="fas fa-building mr-1"></i>
+                                Multiple Locations
+                            </span>
+                            <span class="px-3 py-1 bg-accent/10 dark:bg-accent/20 text-accent dark:text-accent text-sm rounded-full">Completed</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 18 -->
+                <div class="card overflow-hidden dark:bg-darkbg dark:border-gray-700" data-aos="fade-up">
+                    <div class="h-64 bg-gradient-to-br from-accent/10 to-primary/10 dark:from-accent/20 dark:to-primary/20 overflow-hidden">
+                        <img src="assets/images/projects/other_projects_1.png" alt="Other Projects" class="w-full h-full object-cover hover:scale-105 transition-transform duration-300" loading="lazy">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold text-gray-900 dark:text-darktext mb-2">Other Projects</h3>
+                        <p class="text-gray-600 dark:text-gray-300 mb-4">Additional construction projects demonstrating our commitment to quality and professional excellence.</p>
+                        <div class="flex items-center justify-between">
+                            <span class="px-3 py-1 bg-gray-100 dark:bg-gray-700 text-gray-600 dark:text-gray-300 text-sm rounded-full">
+                                <i class="fas fa-building mr-1"></i>
+                                Multiple Locations
+                            </span>
+                            <span class="px-3 py-1 bg-accent/10 dark:bg-accent/20 text-accent dark:text-accent text-sm rounded-full">Completed</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Show More/Less Button -->
+            <div class="text-center mt-12" data-aos="fade-up" data-aos-delay="700">
+                <button id="show-more-btn" class="btn-primary" onclick="toggleProjects()">
+                    Show More Projects
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Permits & Licenses Section -->
+    <section id="testimonials" class="py-20 bg-background dark:bg-darkbg">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="section-heading dark:text-darktext">Permits & Licenses</h2>
+                <p class="section-subheading dark:text-gray-300">
+                    Our company complies with all government-mandated licenses and permits, ensuring full legal compliance and professional standards in all our construction projects.
+                </p>
+            </div>
+            
+            <!-- Main Permits Grid -->
+            <div id="permits-grid" class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto mb-12">
+                <!-- Mayor's Permit -->
+                <div class="permits-card p-6 text-center bg-white dark:bg-gray-800 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100 dark:border-gray-700" data-aos="zoom-in" data-aos-delay="100">
+                    <h3 class="text-xl font-semibold text-gray-900 dark:text-darktext mb-4">Mayor's Permit</h3>
+                    <div class="aspect-[3/4] bg-gray-50 dark:bg-gray-700 rounded-lg mb-4 overflow-hidden group cursor-pointer">
+                        <img src="assets/images/permits_license/mayors_permit.png" alt="Mayor's Permit" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy">
+                    </div>
+                    <p class="text-gray-600 dark:text-gray-300 text-sm">Valid business permit from local government authorities.</p>
+                </div>
+                
+                <!-- Certificate of Incorporation -->
+                <div class="permits-card p-6 text-center bg-white dark:bg-gray-800 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100 dark:border-gray-700" data-aos="zoom-in" data-aos-delay="200">
+                    <h3 class="text-xl font-semibold text-gray-900 dark:text-darktext mb-4">Certificate of Incorporation</h3>
+                    <div class="aspect-[3/4] bg-gray-50 dark:bg-gray-700 rounded-lg mb-4 overflow-hidden group cursor-pointer">
+                        <img src="assets/images/permits_license/cert_of_incorp.png" alt="Certificate of Incorporation" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy">
+                    </div>
+                    <p class="text-gray-600 dark:text-gray-300 text-sm">Official incorporation document from SEC.</p>
+                </div>
+                
+                <!-- Business Plate -->
+                <div class="permits-card p-6 text-center bg-white dark:bg-gray-800 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100 dark:border-gray-700" data-aos="zoom-in" data-aos-delay="300">
+                    <h3 class="text-xl font-semibold text-gray-900 dark:text-darktext mb-4">Business Plate</h3>
+                    <div class="aspect-[3/4] bg-gray-50 dark:bg-gray-700 rounded-lg mb-4 overflow-hidden group cursor-pointer">
+                        <img src="assets/images/permits_license/business_plate.png" alt="Business Plate" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy">
+                    </div>
+                    <p class="text-gray-600 dark:text-gray-300 text-sm">Official business identification plate.</p>
+                </div>
+            </div>
+
+            <!-- Hidden Additional Certificates -->
+            <div id="hidden-permits" class="grid md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto mb-12 hidden">
+                <!-- COR 1 -->
+                <div class="permits-card p-4 text-center bg-white dark:bg-gray-800 rounded-lg shadow-md hover:shadow-lg transition-all duration-300 border border-gray-100 dark:border-gray-700" data-aos="zoom-in">
+                    <h4 class="text-lg font-semibold text-gray-900 dark:text-darktext mb-3">Certificate Page 1</h4>
+                    <div class="aspect-[3/4] bg-gray-50 dark:bg-gray-700 rounded-lg mb-3 overflow-hidden group cursor-pointer">
+                        <img src="assets/images/permits_license/COR_1.png" alt="COR Certificate 1" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy">
+                    </div>
+                    <p class="text-gray-600 dark:text-gray-300 text-xs">Certificate of Registration</p>
+                </div>
+                
+                <!-- COR 2 -->
+                <div class="permits-card p-4 text-center bg-white dark:bg-gray-800 rounded-lg shadow-md hover:shadow-lg transition-all duration-300 border border-gray-100 dark:border-gray-700" data-aos="zoom-in">
+                    <h4 class="text-lg font-semibold text-gray-900 dark:text-darktext mb-3">Certificate Page 2</h4>
+                    <div class="aspect-[3/4] bg-gray-50 dark:bg-gray-700 rounded-lg mb-3 overflow-hidden group cursor-pointer">
+                        <img src="assets/images/permits_license/COR_2.png" alt="COR Certificate 2" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy">
+                    </div>
+                    <p class="text-gray-600 dark:text-gray-300 text-xs">Certificate of Registration</p>
+                </div>
+                
+                <!-- COR 3 -->
+                <div class="permits-card p-4 text-center bg-white dark:bg-gray-800 rounded-lg shadow-md hover:shadow-lg transition-all duration-300 border border-gray-100 dark:border-gray-700" data-aos="zoom-in">
+                    <h4 class="text-lg font-semibold text-gray-900 dark:text-darktext mb-3">PhilHealth & SSS COR</h4>
+                    <div class="aspect-[3/4] bg-gray-50 dark:bg-gray-700 rounded-lg mb-3 overflow-hidden group cursor-pointer">
+                        <img src="assets/images/permits_license/COR_3.png" alt="COR Certificate 3" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy">
+                    </div>
+                    <p class="text-gray-600 dark:text-gray-300 text-xs">Certificate of Registration</p>
+                </div>
+                
+                <!-- Pag-IBIG Registration -->
+                <div class="permits-card p-4 text-center bg-white dark:bg-gray-800 rounded-lg shadow-md hover:shadow-lg transition-all duration-300 border border-gray-100 dark:border-gray-700" data-aos="zoom-in">
+                    <h4 class="text-lg font-semibold text-gray-900 dark:text-darktext mb-3">Pag-IBIG Registration</h4>
+                    <div class="aspect-[3/4] bg-gray-50 dark:bg-gray-700 rounded-lg mb-3 overflow-hidden group cursor-pointer">
+                        <img src="assets/images/permits_license/pag_ibig_registration.png" alt="Pag-IBIG Registration" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy">
+                    </div>
+                    <p class="text-gray-600 dark:text-gray-300 text-xs">Pag-IBIG Fund Registration</p>
+                </div>
+            </div>
+
+            <!-- Show More/Less Button -->
+            <div class="text-center mb-12" data-aos="fade-up" data-aos-delay="400">
+                <button id="show-more-permits-btn" class="btn-primary" onclick="togglePermits()">
+                    Show More Permits
+                </button>
+            </div>
+            
+            <div class="text-center mt-12" data-aos="fade-up" data-aos-delay="400">
+                <div class="bg-white dark:bg-gray-800 rounded-xl p-8 shadow-lg max-w-4xl mx-auto">
+                    <div class="flex items-center justify-center mb-6">
+                        <div class="w-12 h-12 bg-accent shadow-card-dark dark:shadow-accent-glow rounded-lg flex items-center justify-center mr-4">
+                            <i class="fas fa-award text-white text-xl"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-gray-900 dark:text-darktext">Full Legal Compliance</h3>
+                    </div>
+                    <p class="text-gray-600 dark:text-gray-300 text-lg leading-relaxed">
+                        DEJUCOS BUILDERS OPC maintains all necessary permits and licenses required by Philippine law. 
+                        Our commitment to legal compliance ensures that every project meets the highest standards of 
+                        professionalism, safety, and regulatory adherence.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Clients Section -->
+    <section id="clients" class="py-20 bg-gradient-to-r from-primary/5 to-accent/5 dark:from-gray-800 dark:to-gray-700">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="section-heading dark:text-darktext">Our Trusted Clients</h2>
+                <p class="section-subheading dark:text-gray-300">
+                    We're proud to work with leading companies and organizations who trust us with their construction projects.
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-4 gap-8 max-w-4xl mx-auto">
+                <!-- Philippine Rusi Corporation -->
+                <div class="client-logo group flex items-center justify-center p-6 bg-white dark:bg-gray-800 rounded-xl shadow-lg hover:shadow-xl transform hover:-translate-y-2 transition-all duration-300 border border-gray-100 dark:border-gray-600 aspect-square" data-aos="zoom-in" data-aos-delay="100">
+                    <div class="w-24 h-24 flex items-center justify-center">
+                        <img src="assets/images/clients_logo/rusi_logo.png" alt="Philippine Rusi Corporation" class="max-w-full max-h-full object-contain filter grayscale group-hover:grayscale-0 transition-all duration-300">
+                    </div>
+                </div>
+                
+                <!-- 7-Eleven -->
+                <div class="client-logo group flex items-center justify-center p-6 bg-white dark:bg-gray-800 rounded-xl shadow-lg hover:shadow-xl transform hover:-translate-y-2 transition-all duration-300 border border-gray-100 dark:border-gray-600 aspect-square" data-aos="zoom-in" data-aos-delay="200">
+                    <div class="w-24 h-24 flex items-center justify-center">
+                        <img src="assets/images/clients_logo/7_11_logo.png" alt="7-Eleven" class="max-w-full max-h-full object-contain filter grayscale group-hover:grayscale-0 transition-all duration-300">
+                    </div>
+                </div>
+                
+                <!-- Citi Hardware -->
+                <div class="client-logo group flex items-center justify-center p-6 bg-white dark:bg-gray-800 rounded-xl shadow-lg hover:shadow-xl transform hover:-translate-y-2 transition-all duration-300 border border-gray-100 dark:border-gray-600 aspect-square" data-aos="zoom-in" data-aos-delay="300">
+                    <div class="w-24 h-24 flex items-center justify-center">
+                        <img src="assets/images/clients_logo/citi_hardware_logo.png" alt="Citi Hardware" class="max-w-full max-h-full object-contain filter grayscale group-hover:grayscale-0 transition-all duration-300">
+                    </div>
+                </div>
+                
+                <!-- Rusco Motors -->
+                <div class="client-logo group flex items-center justify-center p-6 bg-white dark:bg-gray-800 rounded-xl shadow-lg hover:shadow-xl transform hover:-translate-y-2 transition-all duration-300 border border-gray-100 dark:border-gray-600 aspect-square" data-aos="zoom-in" data-aos-delay="400">
+                    <div class="w-24 h-24 flex items-center justify-center">
+                        <img src="assets/images/clients_logo/rusco_logo.png" alt="Rusco Motors Inc." class="max-w-full max-h-full object-contain filter grayscale group-hover:grayscale-0 transition-all duration-300">
+                    </div>
+                </div>
+                
+                <!-- Commented out unused client slots -->
+                <!--
+                <div class="flex items-center justify-center p-6 bg-white dark:bg-gray-800 rounded-lg shadow-sm hover:shadow-md transition-shadow duration-300" data-aos="zoom-in" data-aos-delay="500">
+                    <div class="w-24 h-16 bg-gray-100 dark:bg-gray-600 rounded flex items-center justify-center">
+                        <i class="fas fa-hospital text-2xl text-gray-400"></i>
+                    </div>
+                </div>
+                
+                <div class="flex items-center justify-center p-6 bg-white dark:bg-gray-800 rounded-lg shadow-sm hover:shadow-md transition-shadow duration-300" data-aos="zoom-in" data-aos-delay="600">
+                    <div class="w-24 h-16 bg-gray-100 dark:bg-gray-600 rounded flex items-center justify-center">
+                        <i class="fas fa-school text-2xl text-gray-400"></i>
+                    </div>
+                </div>
+                
+                <div class="flex items-center justify-center p-6 bg-white dark:bg-gray-800 rounded-lg shadow-sm hover:shadow-md transition-shadow duration-300" data-aos="zoom-in" data-aos-delay="700">
+                    <div class="w-24 h-16 bg-gray-100 dark:bg-gray-600 rounded flex items-center justify-center">
+                        <i class="fas fa-store text-2xl text-gray-400"></i>
+                    </div>
+                </div>
+                
+                <div class="flex items-center justify-center p-6 bg-white dark:bg-gray-800 rounded-lg shadow-sm hover:shadow-md transition-shadow duration-300" data-aos="zoom-in" data-aos-delay="800">
+                    <div class="w-24 h-16 bg-gray-100 dark:bg-gray-600 rounded flex items-center justify-center">
+                        <i class="fas fa-home text-2xl text-gray-400"></i>
+                    </div>
+                </div>
+                
+                <div class="flex items-center justify-center p-6 bg-white dark:bg-gray-800 rounded-lg shadow-sm hover:shadow-md transition-shadow duration-300" data-aos="zoom-in" data-aos-delay="900">
+                    <div class="w-24 h-16 bg-gray-100 dark:bg-gray-600 rounded flex items-center justify-center">
+                        <i class="fas fa-warehouse text-2xl text-gray-400"></i>
+                    </div>
+                </div>
+                
+                <div class="flex items-center justify-center p-6 bg-white dark:bg-gray-800 rounded-lg shadow-sm hover:shadow-md transition-shadow duration-300" data-aos="zoom-in" data-aos-delay="1000">
+                    <div class="w-24 h-16 bg-gray-100 dark:bg-gray-600 rounded flex items-center justify-center">
+                        <i class="fas fa-hotel text-2xl text-gray-400"></i>
+                    </div>
+                </div>
+                
+                <div class="flex items-center justify-center p-6 bg-white dark:bg-gray-800 rounded-lg shadow-sm hover:shadow-md transition-shadow duration-300" data-aos="zoom-in" data-aos-delay="1100">
+                    <div class="w-24 h-16 bg-gray-100 dark:bg-gray-600 rounded flex items-center justify-center">
+                        <i class="fas fa-shopping-mall text-2xl text-gray-400"></i>
+                    </div>
+                </div>
+                
+                <div class="flex items-center justify-center p-6 bg-white dark:bg-gray-800 rounded-lg shadow-sm hover:shadow-md transition-shadow duration-300" data-aos="zoom-in" data-aos-delay="1200">
+                    <div class="w-24 h-16 bg-gray-100 dark:bg-gray-600 rounded flex items-center justify-center">
+                        <i class="fas fa-landmark text-2xl text-gray-400"></i>
+                    </div>
+                </div>
+                -->
+            </div>
+            
+            <div class="text-center mt-12" data-aos="fade-up" data-aos-delay="1300">
+                <p class="text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
+                    From residential homes to commercial buildings, we've successfully completed projects for diverse clients across various industries. 
+                    Our commitment to quality and timely delivery has earned us their trust and continued partnership.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-background dark:bg-darkbg">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="section-heading dark:text-darktext">Get In Touch</h2>
+                <p class="section-subheading dark:text-gray-300">
+                    Ready to start your construction project? Contact DEJUCOS BUILDERS OPC today for a consultation and quote.
+                </p>
+            </div>
+            
+            <div class="grid lg:grid-cols-2 gap-12">
+                <div data-aos="fade-right">
+                    <div class="space-y-8">
+                        <div class="flex items-start space-x-4 contact-info-item p-4 rounded-lg transition-all duration-300">
+                            <div class="w-12 h-12 bg-primary/10 dark:bg-primary/20 rounded-lg flex items-center justify-center flex-shrink-0">
+                                <span class="text-primary dark:text-primary text-xl">📍</span>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-semibold text-gray-900 dark:text-darktext mb-2">Visit Us</h3>
+                                <p class="text-gray-600 dark:text-gray-300">Blk 6 Lot 15, Suntrust Sentosa<br>Calamba City, Laguna</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start space-x-4 contact-info-item p-4 rounded-lg transition-all duration-300">
+                            <div class="w-12 h-12 bg-accent/10 dark:bg-accent/20 rounded-lg flex items-center justify-center flex-shrink-0">
+                                <span class="text-accent dark:text-accent text-xl">✉️</span>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-semibold text-gray-900 dark:text-darktext mb-2">Email Us</h3>
+                                <p class="text-gray-600 dark:text-gray-300">dejucos.opcbuilders@gmail.com</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start space-x-4 contact-info-item p-4 rounded-lg transition-all duration-300">
+                            <div class="w-12 h-12 bg-primary/10 dark:bg-primary/20 rounded-lg flex items-center justify-center flex-shrink-0">
+                                <span class="text-primary dark:text-primary text-xl">☎️</span>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-semibold text-gray-900 dark:text-darktext mb-2">Telephone</h3>
+                                <p class="text-gray-600 dark:text-gray-300">(049) 548 3647<br>Mon-Fri 8AM-6PM</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start space-x-4 contact-info-item p-4 rounded-lg transition-all duration-300">
+                            <div class="w-12 h-12 bg-accent/10 dark:bg-accent/20 rounded-lg flex items-center justify-center flex-shrink-0">
+                                <span class="text-accent dark:text-accent text-xl">📱</span>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-semibold text-gray-900 dark:text-darktext mb-2">Mobile</h3>
+                                <p class="text-gray-600 dark:text-gray-300">+63 929 424 1117<br>24/7 Emergency Service</p>
+                            </div>
+                        </div>
+                        
+                        <div class="pt-8">
+                            <h3 class="text-xl font-semibold text-gray-900 dark:text-darktext mb-4">Follow Us</h3>
+                            <div class="flex space-x-4">
+                                <a href="https://www.facebook.com/profile.php?id=61565950449332" class="w-12 h-12 bg-primary hover:bg-blue-800 text-white rounded-lg flex items-center justify-center transition-colors">
+                                    <i class="fab fa-facebook-f"></i>
+                                </a>
+                                <!-- Commented out until accounts are created
+                                <a href="#" class="w-12 h-12 bg-primary hover:bg-blue-800 text-white rounded-lg flex items-center justify-center transition-colors">
+                                    <i class="fab fa-twitter"></i>
+                                </a>
+                                <a href="#" class="w-12 h-12 bg-primary hover:bg-blue-800 text-white rounded-lg flex items-center justify-center transition-colors">
+                                    <i class="fab fa-linkedin-in"></i>
+                                </a>
+                                <a href="#" class="w-12 h-12 bg-primary hover:bg-blue-800 text-white rounded-lg flex items-center justify-center transition-colors">
+                                    <i class="fab fa-instagram"></i>
+                                </a>
+                                -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div data-aos="fade-left">
+                    <!-- Success Modal -->
+                    <div id="success-modal" class="fixed inset-0 bg-black/50 backdrop-blur-sm hidden flex items-center justify-center z-50 p-4">
+                        <div class="bg-white dark:bg-gray-800 rounded-2xl p-8 max-w-md w-full mx-4 transform scale-95 transition-all duration-300 shadow-2xl border border-gray-200 dark:border-gray-700" id="modal-content">
+                            <div class="text-center">
+                                <!-- Success Icon with Animation -->
+                                <div class="w-20 h-20 bg-green-100 dark:bg-green-900/50 rounded-full flex items-center justify-center mx-auto mb-6 animate-pulse">
+                                    <div class="w-16 h-16 bg-green-500 rounded-full flex items-center justify-center">
+                                        <i class="fas fa-check text-white text-2xl"></i>
+                                    </div>
+                                </div>
+                                
+                                <h3 class="text-2xl font-bold text-gray-900 dark:text-darktext mb-3">
+                                    Message Sent Successfully! 🎉
+                                </h3>
+                                
+                                <p class="text-gray-600 dark:text-gray-300 mb-6 leading-relaxed">
+                                    Thank you for contacting <strong>DEJUCOS BUILDERS OPC</strong>! 
+                                    We've received your message and will get back to you within <strong>24 hours</strong>.
+                                </p>
+                                
+                                <!-- Contact Info in Modal -->
+                                <div class="bg-gradient-to-r from-primary/5 to-accent/5 dark:from-gray-700 dark:to-gray-600 rounded-xl p-4 mb-6">
+                                    <p class="text-sm text-gray-600 dark:text-gray-300">
+                                        <strong>For urgent matters:</strong><br>
+                                        📱 +63 929 424 1117<br>
+                                        ✉️ dejucos.opcbuilders@gmail.com
+                                    </p>
+                                </div>
+                                
+                                <button onclick="closeSuccessModal()" class="w-full bg-gradient-to-r from-primary to-accent hover:from-primary/90 hover:to-accent/90 text-white font-semibold py-3 px-6 rounded-lg transition-all duration-300 transform hover:scale-105 shadow-lg">
+                                    <i class="fas fa-thumbs-up mr-2"></i>
+                                    Awesome, Got It!
+                                </button>
+                                
+                                <!-- Social Links in Modal -->
+                                <div class="flex justify-center space-x-4 mt-4">
+                                    <a href="https://www.facebook.com/profile.php?id=61565950449332" class="w-10 h-10 bg-blue-500 hover:bg-blue-600 text-white rounded-full flex items-center justify-center transition-colors duration-300">
+                                        <i class="fab fa-facebook-f text-sm"></i>
+                                    </a>
+                                    <a href="tel:+639294241117" class="w-10 h-10 bg-green-500 hover:bg-green-600 text-white rounded-full flex items-center justify-center transition-colors duration-300">
+                                        <i class="fas fa-phone text-sm"></i>
+                                    </a>
+                                    <a href="mailto:dejucos.opcbuilders@gmail.com" class="w-10 h-10 bg-gray-500 hover:bg-gray-600 text-white rounded-full flex items-center justify-center transition-colors duration-300">
+                                        <i class="fas fa-envelope text-sm"></i>
+                                    </a>
+                                    <!-- Commented out until accounts are created
+                                    <a href="#" class="w-10 h-10 bg-sky-500 hover:bg-sky-600 text-white rounded-full flex items-center justify-center transition-colors duration-300">
+                                        <i class="fab fa-twitter text-sm"></i>
+                                    </a>
+                                    <a href="#" class="w-10 h-10 bg-blue-700 hover:bg-blue-800 text-white rounded-full flex items-center justify-center transition-colors duration-300">
+                                        <i class="fab fa-linkedin-in text-sm"></i>
+                                    </a>
+                                    <a href="#" class="w-10 h-10 bg-pink-500 hover:bg-pink-600 text-white rounded-full flex items-center justify-center transition-colors duration-300">
+                                        <i class="fab fa-instagram text-sm"></i>
+                                    </a>
+                                    -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <form id="contact-form" class="space-y-6" action="https://formspree.io/f/xvgqzpop" method="POST">
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                            <div>
+                                <label for="name" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">Name</label>
+                                <input type="text" id="name" name="name" class="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 bg-background dark:bg-darkbg text-gray-900 dark:text-darktext rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent transition-colors" required>
+                            </div>
+                            <div>
+                                <label for="email" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">Email</label>
+                                <input type="email" id="email" name="email" class="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 bg-background dark:bg-darkbg text-gray-900 dark:text-darktext rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent transition-colors" required>
+                            </div>
+                        </div>
+                        
+                        <div>
+                            <label for="subject" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">Subject</label>
+                            <input type="text" id="subject" name="_subject" class="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 bg-background dark:bg-darkbg text-gray-900 dark:text-darktext rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent transition-colors" required>
+                        </div>
+                        
+                        <div>
+                            <label for="message" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">Message</label>
+                            <textarea id="message" name="message" rows="5" class="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 bg-background dark:bg-darkbg text-gray-900 dark:text-darktext rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent transition-colors resize-none" required></textarea>
+                        </div>
+                        
+                        <!-- Hidden fields for better organization -->
+                        <input type="hidden" name="_replyto" value="dejucos.opcbuilders@gmail.com">
+                        <input type="hidden" name="_captcha" value="false">
+                        <input type="hidden" name="_format" value="plain">
+                        
+                        <button type="submit" id="submit-btn" class="w-full btn-primary relative overflow-hidden">
+                            <span id="btn-text">Send Message</span>
+                            <span id="btn-loading" class="hidden">
+                                <i class="fas fa-spinner fa-spin mr-2"></i>
+                                Sending...
+                            </span>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 dark:bg-gray-800 text-white py-12">
+        <div class="container mx-auto px-6">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div>
+                    <div class="flex items-center space-x-3 mb-4">
+                        <div class="w-12 h-12 bg-accent shadow-card-light rounded-lg flex items-center justify-center flex-shrink-0">
+                            <img src="./assets/images/company_logo/blue_logo.png" alt="DEJUCOS BUILDERS OPC Logo" class="w-8 h-8 object-contain">
+                        </div>
+                        <span class="text-2xl font-bold">DEJUCOS BUILDERS OPC</span>
+                    </div>
+                    <p class="text-gray-400 dark:text-gray-300 mb-4">
+                        Building excellence through quality construction, glass and aluminum works, and professional fit-out solutions.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="https://www.facebook.com/profile.php?id=61565950449332" class="text-gray-400 dark:text-gray-300 hover:text-white transition-colors">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <!-- Commented out until accounts are created
+                        <a href="#" class="text-gray-400 dark:text-gray-300 hover:text-white transition-colors">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 dark:text-gray-300 hover:text-white transition-colors">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 dark:text-gray-300 hover:text-white transition-colors">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        -->
+                    </div>
+                </div>
+                
+                <div>
+                    <h3 class="text-xl font-semibold mb-4">Services</h3>
+                    <ul class="space-y-2 text-gray-400 dark:text-gray-300">
+                        <li><a href="#services" class="hover:text-white transition-colors">Construction</a></li>
+                        <li><a href="#services" class="hover:text-white transition-colors">Glass & Aluminum Works</a></li>
+                        <li><a href="#services" class="hover:text-white transition-colors">Fit-out Works</a></li>
+                        <li><a href="#services" class="hover:text-white transition-colors">Project Management</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="text-xl font-semibold mb-4">Company</h3>
+                    <ul class="space-y-2 text-gray-400 dark:text-gray-300">
+                        <li><a href="#about" class="hover:text-white transition-colors">About Us</a></li>
+                        <li><a href="#team" class="hover:text-white transition-colors">Our Team</a></li>
+                        <li><a href="#testimonials" class="hover:text-white transition-colors">Permits & Licenses</a></li>
+                        <li><a href="#contact" class="hover:text-white transition-colors">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="text-xl font-semibold mb-4">Contact Info</h3>
+                    <ul class="space-y-2 text-gray-400 dark:text-gray-300">
+                        <li>📍 Blk 6 Lot 15, Suntrust Sentosa</li>
+                        <li>Calamba City, Laguna</li>
+                        <li>☎️ (049) 548 3647</li>
+                        <li>📱 (+63) 929 424 1117</li>
+                        <li>✉️ dejucos.opcbuilders@gmail.com</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 dark:border-gray-700 mt-8 pt-8 text-center text-gray-400 dark:text-gray-300">
+                <p>&copy; 2025 DEJUCOS BUILDERS OPC. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- AOS JS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    
+    
+    <script>
+
+        <!-- Custom JavaScript -->
+
+        // Initialize AOS
+        AOS.init({
+            duration: 1000,
+            once: false, // Allow animations to repeat
+            offset: 100,
+            disable: false
+        });
+
+        // Re-initialize AOS when window is resized or scrolled after project toggle
+        let isProjectToggled = false;
+        
+        window.addEventListener('scroll', function() {
+            if (isProjectToggled) {
+                // Refresh AOS periodically after project toggle
+                AOS.refresh();
+            }
+        });
+
+        window.addEventListener('resize', function() {
+            AOS.refresh();
+        });
+
+        // Dark Mode Toggle Functionality
+        const darkModeToggle = document.getElementById('dark-mode-toggle');
+        const mobileDarkModeToggle = document.getElementById('mobile-dark-mode-toggle');
+        const htmlElement = document.documentElement;
+        const switchKnob = document.getElementById('switch-knob');
+        const mobileSwitchKnob = document.getElementById('mobile-switch-knob');
+
+        function setSwitchState(isDark) {
+            if (isDark) {
+                switchKnob && (switchKnob.style.transform = 'translateX(24px)');
+                mobileSwitchKnob && (mobileSwitchKnob.style.transform = 'translateX(12px)'); // Adjusted for ultra compact mobile switch
+            } else {
+                switchKnob && (switchKnob.style.transform = 'translateX(0)');
+                mobileSwitchKnob && (mobileSwitchKnob.style.transform = 'translateX(0)');
+            }
+        }
+
+        function updateLogo() {
+            const headerLogo = document.getElementById('header-logo');
+            const isDark = htmlElement.classList.contains('dark');
+            
+            if (headerLogo) {
+                // Add fade effect during transition
+                headerLogo.style.opacity = '0.5';
+                
+                setTimeout(() => {
+                    if (isDark) {
+                        headerLogo.src = './assets/images/company_logo/gold_logo.png';
+                    } else {
+                        headerLogo.src = './assets/images/company_logo/blue_logo.png';
+                    }
+                    headerLogo.style.opacity = '1';
+                }, 150);
+            }
+        }
+
+        function toggleDarkMode() {
+            htmlElement.classList.toggle('dark');
+            const isDark = htmlElement.classList.contains('dark');
+            setSwitchState(isDark);
+            updateLogo();
+        }
+
+        darkModeToggle.addEventListener('click', toggleDarkMode);
+        mobileDarkModeToggle.addEventListener('click', toggleDarkMode);
+
+        document.addEventListener('DOMContentLoaded', () => {
+            const isDark = htmlElement.classList.contains('dark');
+            setSwitchState(isDark);
+            updateLogo();
+        });
+
+        // Mobile menu toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Navigation active state
+        const navLinks = document.querySelectorAll('[data-nav-link]');
+        const sections = document.querySelectorAll('section');
+
+        function updateActiveNavLink() {
+            const scrollY = window.pageYOffset;
+            
+            sections.forEach((section) => {
+                const sectionTop = section.offsetTop - 100;
+                const sectionHeight = section.offsetHeight;
+                const sectionId = section.getAttribute('id');
+                
+                if (scrollY >= sectionTop && scrollY < sectionTop + sectionHeight) {
+                    navLinks.forEach((link) => {
+                        link.classList.remove('active');
+                        if (link.getAttribute('href') === `#${sectionId}`) {
+                            link.classList.add('active');
+                        }
+                    });
+                }
+            });
+        }
+
+        window.addEventListener('scroll', updateActiveNavLink);
+
+        // Smooth scrolling for navigation links
+        navLinks.forEach(link => {
+            link.addEventListener('click', (e) => {
+                e.preventDefault();
+                const targetId = link.getAttribute('href').substring(1);
+                const targetSection = document.getElementById(targetId);
+                
+                if (targetSection) {
+                    const offsetTop = targetSection.offsetTop - 80;
+                    window.scrollTo({
+                        top: offsetTop,
+                        behavior: 'smooth'
+                    });
+                }
+                
+                // Close mobile menu if open
+                mobileMenu.classList.add('hidden');
+            });
+        });
+
+        // Modal functions
+        function showSuccessModal() {
+            const modal = document.getElementById('success-modal');
+            const modalContent = document.getElementById('modal-content');
+            
+            modal.classList.remove('hidden');
+            
+            // Add entrance animation
+            setTimeout(() => {
+                modalContent.classList.remove('scale-95');
+                modalContent.classList.add('scale-100');
+            }, 10);
+            
+            // Add confetti effect (optional)
+            createConfetti();
+            
+            // Prevent body scroll
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeSuccessModal() {
+            const modal = document.getElementById('success-modal');
+            const modalContent = document.getElementById('modal-content');
+            
+            // Add exit animation
+            modalContent.classList.remove('scale-100');
+            modalContent.classList.add('scale-95');
+            
+            setTimeout(() => {
+                modal.classList.add('hidden');
+                document.body.style.overflow = 'auto'; // Restore body scroll
+            }, 300);
+        }
+
+        // Optional: Simple confetti effect
+        function createConfetti() {
+            const colors = ['#3B82F6', '#10B981', '#F59E0B', '#EF4444', '#8B5CF6'];
+            const confettiCount = 50;
+            
+            for (let i = 0; i < confettiCount; i++) {
+                const confetti = document.createElement('div');
+                confetti.style.position = 'fixed';
+                confetti.style.width = '10px';
+                confetti.style.height = '10px';
+                confetti.style.backgroundColor = colors[Math.floor(Math.random() * colors.length)];
+                confetti.style.left = Math.random() * 100 + 'vw';
+                confetti.style.top = '-10px';
+                confetti.style.zIndex = '9999';
+                confetti.style.pointerEvents = 'none';
+                confetti.style.borderRadius = '2px';
+                confetti.style.opacity = '0.8';
+                
+                document.body.appendChild(confetti);
+                
+                // Animate confetti falling
+                const fallDuration = Math.random() * 2000 + 2000; // 2-4 seconds
+                const rotation = Math.random() * 360;
+                
+                confetti.animate([
+                    { 
+                        transform: `translateY(-10px) rotate(0deg)`,
+                        opacity: 0.8 
+                    },
+                    { 
+                        transform: `translateY(${window.innerHeight + 20}px) rotate(${rotation}deg)`,
+                        opacity: 0 
+                    }
+                ], {
+                    duration: fallDuration,
+                    easing: 'cubic-bezier(0.25, 0.46, 0.45, 0.94)'
+                }).onfinish = () => {
+                    confetti.remove();
+                };
+            }
+        }
+
+        // Close modal when clicking outside
+        document.addEventListener('click', (e) => {
+            const modal = document.getElementById('success-modal');
+            if (e.target.id === 'success-modal') {
+                closeSuccessModal();
+            }
+        });
+
+        // Close modal with Escape key
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') {
+                const modal = document.getElementById('success-modal');
+                if (modal && !modal.classList.contains('hidden')) {
+                    closeSuccessModal();
+                }
+            }
+        });
+
+        // Error modal function (optional)
+        function showErrorModal() {
+            // Create a simple error modal
+            const errorModal = document.createElement('div');
+            errorModal.className = 'fixed inset-0 bg-black/50 backdrop-blur-sm flex items-center justify-center z-50 p-4';
+            errorModal.innerHTML = `
+                <div class="bg-white dark:bg-gray-800 rounded-2xl p-8 max-w-md w-full mx-4 shadow-2xl border border-gray-200 dark:border-gray-700">
+                    <div class="text-center">
+                        <div class="w-20 h-20 bg-red-100 dark:bg-red-900/50 rounded-full flex items-center justify-center mx-auto mb-6">
+                            <div class="w-16 h-16 bg-red-500 rounded-full flex items-center justify-center">
+                                <i class="fas fa-exclamation-triangle text-white text-2xl"></i>
+                            </div>
+                        </div>
+                        
+                        <h3 class="text-2xl font-bold text-gray-900 dark:text-darktext mb-3">
+                            Oops! Something went wrong
+                        </h3>
+                        
+                        <p class="text-gray-600 dark:text-gray-300 mb-6">
+                            We couldn't send your message right now. Please try again or contact us directly.
+                        </p>
+                        
+                        <div class="flex gap-3">
+                            <button onclick="this.closest('.fixed').remove()" class="flex-1 bg-gray-500 hover:bg-gray-600 text-white font-semibold py-3 px-4 rounded-lg transition-colors duration-300">
+                                Close
+                            </button>
+                            <a href="tel:+639294241117" class="flex-1 bg-green-500 hover:bg-green-600 text-white font-semibold py-3 px-4 rounded-lg transition-colors duration-300 text-center">
+                                Call Us
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            `;
+            
+            document.body.appendChild(errorModal);
+            
+            // Remove after 10 seconds
+            setTimeout(() => {
+                if (errorModal.parentNode) {
+                    errorModal.remove();
+                }
+            }, 10000);
+        }
+
+        // Form submission with custom success modal
+        const contactForm = document.getElementById('contact-form');
+        const submitBtn = document.getElementById('submit-btn');
+        const btnText = document.getElementById('btn-text');
+        const btnLoading = document.getElementById('btn-loading');
+
+        if (contactForm && submitBtn && btnText && btnLoading) {
+            contactForm.addEventListener('submit', async (e) => {
+                e.preventDefault();
+                
+                // Show loading state
+                btnText.classList.add('hidden');
+                btnLoading.classList.remove('hidden');
+                submitBtn.disabled = true;
+                submitBtn.classList.add('opacity-75');
+                
+                try {
+                    // Submit form data to Formspree
+                    const formData = new FormData(contactForm);
+                    const response = await fetch(contactForm.action, {
+                        method: 'POST',
+                        body: formData,
+                        headers: {
+                            'Accept': 'application/json'
+                        }
+                    });
+                    
+                    if (response.ok) {
+                        // Show success modal
+                        showSuccessModal();
+                        contactForm.reset();
+                    } else {
+                        throw new Error('Form submission failed');
+                    }
+                } catch (error) {
+                    // Show custom error modal instead of ugly alert
+                    showErrorModal();
+                } finally {
+                    // Reset button
+                    btnText.classList.remove('hidden');
+                    btnLoading.classList.add('hidden');
+                    submitBtn.disabled = false;
+                    submitBtn.classList.remove('opacity-75');
+                }
+            });
+        }
+
+        // Form submission - Fallback for old form selector (backup)
+        const contactFormFallback = document.querySelector('form');
+        if (contactFormFallback && !contactForm) {
+            contactFormFallback.addEventListener('submit', (e) => {
+                // Let Formspree handle the submission
+                // Show loading state
+                const submitButton = contactFormFallback.querySelector('button[type="submit"]');
+                const originalText = submitButton.textContent;
+                submitButton.textContent = 'Sending...';
+                submitButton.disabled = true;
+                
+                // Reset button after a delay (Formspree will redirect)
+                setTimeout(() => {
+                    submitButton.textContent = originalText;
+                    submitButton.disabled = false;
+                }, 3000);
+            });
+        }
+
+        // Add some interactive effects
+        document.addEventListener('DOMContentLoaded', () => {
+            // Navbar background on scroll
+            const navbar = document.querySelector('nav');
+            
+            window.addEventListener('scroll', () => {
+                if (window.scrollY > 50) {
+                    navbar.classList.add('bg-white/95', 'dark:bg-gray-900/95');
+                    navbar.classList.remove('bg-white/90', 'dark:bg-gray-900/90');
+                } else {
+                    navbar.classList.add('bg-white/90', 'dark:bg-gray-900/90');
+                    navbar.classList.remove('bg-white/95', 'dark:bg-gray-900/95');
+                }
+            });
+        });
+
+        // Toggle Projects Functionality
+        function toggleProjects() {
+            const hiddenProjects = document.getElementById('hidden-projects');
+            const showMoreBtn = document.getElementById('show-more-btn');
+            
+            if (hiddenProjects.classList.contains('hidden')) {
+                hiddenProjects.classList.remove('hidden');
+                showMoreBtn.textContent = 'Show Less Projects';
+                isProjectToggled = true;
+                
+                // Initialize AOS for newly shown elements
+                setTimeout(() => {
+                    AOS.refresh();
+                }, 100);
+            } else {
+                hiddenProjects.classList.add('hidden');
+                showMoreBtn.textContent = 'Show More Projects';
+                isProjectToggled = true;
+                
+                // Scroll to the start of the portfolio section
+                const portfolioSection = document.getElementById('portfolio');
+                portfolioSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                
+                // Refresh AOS after hiding elements and scrolling
+                setTimeout(() => {
+                    AOS.refresh();
+                    // Reset the flag after a delay to prevent excessive refreshing
+                    setTimeout(() => {
+                        isProjectToggled = false;
+                    }, 2000);
+                }, 500);
+            }
+        }
+
+        // Toggle Permits Functionality
+        function togglePermits() {
+            const hiddenPermits = document.getElementById('hidden-permits');
+            const showMorePermitsBtn = document.getElementById('show-more-permits-btn');
+            
+            if (hiddenPermits.classList.contains('hidden')) {
+                hiddenPermits.classList.remove('hidden');
+                showMorePermitsBtn.textContent = 'Show Less Permits';
+                
+                // Initialize AOS for newly shown elements
+                setTimeout(() => {
+                    AOS.refresh();
+                }, 100);
+            } else {
+                hiddenPermits.classList.add('hidden');
+                showMorePermitsBtn.textContent = 'Show More Permits';
+                
+                // Scroll to the start of the permits section
+                const permitsSection = document.getElementById('testimonials');
+                permitsSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                
+                // Refresh AOS after hiding elements and scrolling
+                setTimeout(() => {
+                    AOS.refresh();
+                }, 500);
+            }
+        }
+    </script>
+</body>
+</html>

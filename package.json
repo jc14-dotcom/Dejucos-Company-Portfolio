@@ -1,0 +1,26 @@
+{
+  "name": "company-portfolio",
+  "version": "1.0.0",
+  "description": "A modern single-page portfolio website",
+  "main": "index.html",
+  "scripts": {
+    "build-css": "tailwindcss -i ./input.css -o ./output.css --watch",
+    "build": "tailwindcss -i ./input.css -o ./output.css --minify",
+    "serve": "npx serve ."
+  },
+  "keywords": [
+    "portfolio",
+    "website",
+    "tailwind",
+    "aos"
+  ],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "serve": "^14.2.4",
+    "tailwindcss": "^3.4.0"
+  },
+  "dependencies": {
+    "caniuse-lite": "^1.0.30001726"
+  }
+}
